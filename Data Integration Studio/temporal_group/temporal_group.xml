@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+    <PromptGroup promptId="PromptGroup_1737978187015_282994" version="1.0">
+        <DefinitionsAndSubgroups>
+            <DataSourceColumnDefinition allowedColumnTypes="31" allowedDataSources="1" maxValueCount="-1" minValueCount="1" name="GroupByColumns" promptId="PromptDef_1654684162624_784448" selectionOrdered="true">
+                <Label>
+                    <Text xml:lang="en-US">Group by columns</Text>
+                </Label>
+                <Description>
+                    <Text xml:lang="en-US">(without from / to columns)</Text>
+                </Description>
+                <UserInfo>
+                    <MapText key="EmitSQL">No</MapText>
+                    <MapText key="LimitColumns">Yes</MapText>
+                    <MapText key="TableSelect">Targets</MapText>
+                </UserInfo>
+            </DataSourceColumnDefinition>
+            <TextDefinition minValueCount="1" name="ValidFromColumn" promptId="PromptDef_1654684405906_163411">
+                <Label>
+                    <Text xml:lang="en-US">Valid-from column</Text>
+                </Label>
+                <Description>
+                    <Text xml:lang="en-US">The column must exist in both imputs and also be present in the output</Text>
+                </Description>
+                <DefaultValue>
+                    <String value="valid_from_dt"></String>
+                </DefaultValue>
+            </TextDefinition>
+            <TextDefinition minValueCount="1" name="ValidToColumn" promptId="PromptDef_1654684442872_7662">
+                <Label>
+                    <Text xml:lang="en-US">Valid-to column</Text>
+                </Label>
+                <Description>
+                    <Text xml:lang="en-US">The column must exist in both imputs and also be present in the output</Text>
+                </Description>
+                <DefaultValue>
+                    <String value="valid_to_dt"></String>
+                </DefaultValue>
+            </TextDefinition>
+        </DefinitionsAndSubgroups>
+        <Label>
+            <Text xml:lang="en-US">General</Text>
+        </Label>
+        <Description>
+            <Text xml:lang="en-US">General</Text>
+        </Description>
+    </PromptGroup>

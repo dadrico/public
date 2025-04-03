@@ -1,0 +1,92 @@
+<?xml version="1.0"?>
+    <PromptGroup promptId="PromptGroup_1737978228277_52328" version="1.0">
+        <DefinitionsAndSubgroups>
+            <DataSourceColumnDefinition allowedColumnTypes="31" allowedDataSources="1" maxValueCount="-1" minValueCount="1" name="KeyColumns" promptId="PromptDef_1654684162624_784448" selectionOrdered="true">
+                <Label>
+                    <Text xml:lang="en-US">Key columns of the left table</Text>
+                </Label>
+                <Description>
+                    <Text xml:lang="en-US">timeline key columns (without from / to columns)</Text>
+                </Description>
+                <UserInfo>
+                    <MapText key="EmitSQL">No</MapText>
+                    <MapText key="LimitColumns">Yes</MapText>
+                    <MapText key="TableSelect">Sources</MapText>
+                </UserInfo>
+            </DataSourceColumnDefinition>
+            <TextDefinition allowUserValues="false" name="JoinType" promptId="PromptDef_1654684162623_773764">
+                <Label>
+                    <Text xml:lang="en-US">Join type</Text>
+                </Label>
+                <Description>
+                    <Text xml:lang="en-US">LEFT or INNER, other types are not supported</Text>
+                </Description>
+                <DefaultValue>
+                    <String value="LEFT"></String>
+                </DefaultValue>
+                <ValueProvider>
+                    <StaticValueProvider dataType="StringType">
+                        <Values>
+                            <String index="0" value="INNER"></String>
+                            <String index="1" value="LEFT"></String>
+                        </Values>
+                        <Labels>
+                            <Language xml:lang="en-US">
+                                <LabelSet>
+                                    <String index="0" value="INNER"></String>
+                                    <String index="1" value="LEFT"></String>
+                                </LabelSet>
+                            </Language>
+                        </Labels>
+                    </StaticValueProvider>
+                </ValueProvider>
+            </TextDefinition>
+            <TextDefinition allowMultipleLines="true" minValueCount="1" name="JoinCondition" promptId="PromptDef_1654684255894_788402">
+                <Label>
+                    <Text xml:lang="en-US">Join condition</Text>
+                </Label>
+                <Description>
+                    <Text xml:lang="en-US">use (proc) SQL syntax, with L. and R. as LEFT and RIGHT table aliases</Text>
+                </Description>
+            </TextDefinition>
+            <TextDefinition minValueCount="1" name="ValidFromColumn" promptId="PromptDef_1654684405906_163411">
+                <Label>
+                    <Text xml:lang="en-US">Valid-from column</Text>
+                </Label>
+                <Description>
+                    <Text xml:lang="en-US">The column must exist in both imputs and also be present in the output</Text>
+                </Description>
+                <DefaultValue>
+                    <String value="valid_from_dt"></String>
+                </DefaultValue>
+            </TextDefinition>
+            <TextDefinition minValueCount="1" name="ValidToColumn" promptId="PromptDef_1654684442872_7662">
+                <Label>
+                    <Text xml:lang="en-US">Valid-to column</Text>
+                </Label>
+                <Description>
+                    <Text xml:lang="en-US">The column must exist in both imputs and also be present in the output</Text>
+                </Description>
+                <DefaultValue>
+                    <String value="valid_to_dt"></String>
+                </DefaultValue>
+            </TextDefinition>
+            <TextDefinition minValueCount="1" name="segmentSize" promptId="PromptDef_1685444732749_223276">
+                <Label>
+                    <Text xml:lang="en-US">Segment size</Text>
+                </Label>
+                <Description>
+                    <Text xml:lang="en-US">To optimize the join, left table is segmented by this value</Text>
+                </Description>
+                <DefaultValue>
+                    <String value="&amp;defaultTLJoinSegmentSize."></String>
+                </DefaultValue>
+            </TextDefinition>
+        </DefinitionsAndSubgroups>
+        <Label>
+            <Text xml:lang="en-US">General</Text>
+        </Label>
+        <Description>
+            <Text xml:lang="en-US">General</Text>
+        </Description>
+    </PromptGroup>

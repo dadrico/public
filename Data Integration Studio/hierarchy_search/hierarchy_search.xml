@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+    <PromptGroup promptId="PromptGroup_1737811706535_23776" version="1.0">
+        <DefinitionsAndSubgroups>
+            <DataSourceColumnDefinition allowedColumnTypes="31" allowedDataSources="1" minValueCount="1" name="childKey" promptId="PromptDef_1711541262857_314011">
+                <Label>
+                    <Text xml:lang="en-US">Key Column</Text>
+                </Label>
+                <UserInfo>
+                    <MapText key="EmitSQL">No</MapText>
+                    <MapText key="LimitColumns">Yes</MapText>
+                    <MapText key="TableSelect">Targets</MapText>
+                </UserInfo>
+            </DataSourceColumnDefinition>
+            <DataSourceColumnDefinition allowedColumnTypes="31" allowedDataSources="1" minValueCount="1" name="parentKey" promptId="PromptDef_1711541262858_633366">
+                <Label>
+                    <Text xml:lang="en-US">Column with the key of the parent</Text>
+                </Label>
+                <UserInfo>
+                    <MapText key="EmitSQL">No</MapText>
+                    <MapText key="LimitColumns">Yes</MapText>
+                    <MapText key="TableSelect">Targets</MapText>
+                </UserInfo>
+            </DataSourceColumnDefinition>
+            <TextDefinition fixed="true" name="usage" promptId="PromptDef_1711711174782_798532">
+                <Label>
+                    <Text xml:lang="en-US">Usage</Text>
+                </Label>
+                <Description>
+                    <Text xml:lang="en-US">Use these functions in the expression field in the mappings:&#10;getRootPath()&#10;getFromRoot(variable)&#10;getFromParent(variable)&#10;getFromAncestorLevel(variable, level)</Text>
+                </Description>
+            </TextDefinition>
+        </DefinitionsAndSubgroups>
+        <Label>
+            <Text xml:lang="en-US">General</Text>
+        </Label>
+        <Description>
+            <Text xml:lang="en-US">General</Text>
+        </Description>
+    </PromptGroup>
