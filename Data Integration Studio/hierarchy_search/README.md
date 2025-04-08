@@ -13,26 +13,25 @@ The transformation has 4 functions defined for use in mapping expressions:
 
 Let's take a following table containing parent - child relations:
 
-![obraz](https://github.com/user-attachments/assets/99674c33-0e13-43e6-bf29-86ac9881e546)
+![image](.images/hierarchy_search1.png)
 
 The following expression definitions:
 
-![obraz](https://github.com/user-attachments/assets/465973c8-c7d2-4d38-83a9-8d9557c7b9d0)
+![image](.images/hierarchy_search2.png)
 
 ...will result in the following output table:
 
-![obraz](https://github.com/user-attachments/assets/35bf2fe3-f690-43db-8303-8491b5507e37)
+![image](.images/hierarchy_search3.png)
 
 
 
 **Mappings**
 
 These new columns are defined using the appropriate functions in the expression section of the column mapping
-![obraz](https://github.com/user-attachments/assets/57caff1a-b93a-44c2-9d8a-184598e81b79)
+![image](.images/hierarchy_search4.png)
 
 
 **Options**
 
 It is also required to provide the columns containing the child and parent keys
-![obraz](https://github.com/user-attachments/assets/08bd9d19-d0fd-49e9-a666-a255f6179fcd)
-
+![image](.images/hierarchy_search5.png)

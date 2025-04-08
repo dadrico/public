@@ -6,11 +6,11 @@ When joining two tables in which the data can change over time, the temporal joi
 
 Let’s take a table with invoices as our LEFT input table. It contains one invoice that changes its status over time:
 
-![image](https://github.com/user-attachments/assets/037210b9-583b-43d7-829f-1bf2feb6fe81)
+![image](.images/temporal_join1.png)
 
 As the RIGHT input table let’s take the payments:
 
-![image](https://github.com/user-attachments/assets/81860087-733d-4ce7-9217-523611fe26e0)
+![image](.images/temporal_join2.png)
 
 •	Row 1 is the first payment that was added on Wednesday and which value was later corrected on Thursday
 
@@ -24,7 +24,7 @@ The <ins>join condition</ins> is: **L.invoice_id = R.invoice_id**.
 
 The output is as follows:
 
-![image](https://github.com/user-attachments/assets/d9aa5f9a-1084-4909-ba83-35fb29e4b4c4)
+![image](.images/temporal_join3.png)
 
 Explanation:
 
@@ -46,17 +46,17 @@ The key of the output is therefore composite and consists of 2 columns: **invoic
 
 This job contains an example of a temporal join:
 
-![image](https://github.com/user-attachments/assets/7ded3a79-44c6-4ea7-bbe7-18b5d228cf60)
+![image](.images/temporal_join4.png)
 
 **Mappings**
 
 In the left pane there are all the columns from both source tables. We map all the columns that we want to output. Note that there are two sets of valid_from/_to columns in the input pane. In the output the transformation will make one timeline based on the two input timelines. Therefore, only one set of valid_from/_to columns is required in the output. For consistency it is advised to map these columns from the left (first) input table, but the transformation will work either way with exactly the same result.
 
-![image](https://github.com/user-attachments/assets/48bbf400-4e94-4e2a-98bd-9fe3ad08fd1c)
+![image](.images/temporal_join5.png)
 
 **Options**
 
-![image](https://github.com/user-attachments/assets/f95da368-47a4-49ed-a667-ef2fd21a9b23)
+![image](.images/temporal_join6.png)
 
 •	Key columns – these are the columns that – together with valid_to – define the primary key of the left (first) input table. In this transformation it is possible that the output key is different from the key of the left input table. As it is with regular joins, if there are many records in the right (second) input table that meet the join conditions for a given key, there will be multiple records for this key in the output.
 
