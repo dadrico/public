@@ -6,7 +6,7 @@ TEMPORAL_LAST is used to deduplicate records. We use TEMPORAL_LAST to choose the
 
 Let’s say we have 3 payments on an invoice and we want to choose the latest payment based on payment date (an attribute of the payment). The input looks like this:
 
-![image](.images/temporal_last1.png)
+![image](https://github.com/dadrico/public/blob/main/Data%20Integration%20Studio/temporal_group/.images/temporal_last1.png)
 
 •	Row 1 is a payment inserted on Monday that never changed
 
@@ -20,7 +20,7 @@ When filling the options we choose the **invoice_id** to be the group-by variabl
 
 The output is this:
 
-![image](.images/temporal_last2.png)
+![image](https://github.com/dadrico/public/blob/main/Data%20Integration%20Studio/temporal_group/.images/temporal_last2.png)
 
 Please note that even though payment_id is still present in the output, the timeline key is now 
 the **invoice_id**.
@@ -37,7 +37,7 @@ Explanation:
 
 The job contains an example of temporal last transformation:
 
-![image](.images/temporal_last3.png)
+![image](https://github.com/dadrico/public/blob/main/Data%20Integration%20Studio/temporal_group/.images/temporal_last3.png)
 
 Let's say that we want to choose the latest registered record within every validity period.
 
@@ -45,11 +45,11 @@ Let's say that we want to choose the latest registered record within every valid
 
 The mappings are usually 1:1 – we still take all the values of the input records; the changes happen within the timelines (valid-from and valid-to columns).
 
-![image](.images/temporal_last4.png)
+![image](https://github.com/dadrico/public/blob/main/Data%20Integration%20Studio/temporal_group/.images/temporal_last4.png)
 
 **Options**
 
-![image](.images/temporal_last5.png)
+![image](https://github.com/dadrico/public/blob/main/Data%20Integration%20Studio/temporal_group/.images/temporal_last5.png)
 
 •	Group by columns – the columns that define the aggregation groups
 
