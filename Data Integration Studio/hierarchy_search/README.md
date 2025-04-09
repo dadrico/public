@@ -13,25 +13,25 @@ The transformation has 4 functions defined for use in mapping expressions:
 
 Let's take a following table containing parent - child relations:
 
-![image](https://github.com/dadrico/public/blob/main/Data%20Integration%20Studio/temporal_group/.images/hierarchy_search1.png)
+![image](https://raw.githubusercontent.com/dadrico/public/main/Data%20Integration%20Studio/.images/hierarchy_search1.png)
 
 The following expression definitions:
 
-![image](https://github.com/dadrico/public/blob/main/Data%20Integration%20Studio/temporal_group/.images/hierarchy_search2.png)
+![image](https://raw.githubusercontent.com/dadrico/public/main/Data%20Integration%20Studio/.images/hierarchy_search2.png)
 
 ...will result in the following output table:
 
-![image](https://github.com/dadrico/public/blob/main/Data%20Integration%20Studio/temporal_group/.images/hierarchy_search3.png)
+![image](https://raw.githubusercontent.com/dadrico/public/main/Data%20Integration%20Studio/.images/hierarchy_search3.png)
 
 
 
 **Mappings**
 
 These new columns are defined using the appropriate functions in the expression section of the column mapping
-![image](https://github.com/dadrico/public/blob/main/Data%20Integration%20Studio/temporal_group/.images/hierarchy_search4.png)
+![image](https://raw.githubusercontent.com/dadrico/public/main/Data%20Integration%20Studio/.images/hierarchy_search4.png)
 
 
 **Options**
 
 It is also required to provide the columns containing the child and parent keys
-![image](https://github.com/dadrico/public/blob/main/Data%20Integration%20Studio/temporal_group/.images/hierarchy_search5.png)
+![image](https://raw.githubusercontent.com/dadrico/public/main/Data%20Integration%20Studio/.images/hierarchy_search5.png)
